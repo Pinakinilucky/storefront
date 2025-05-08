@@ -1,26 +1,80 @@
-{% load static %} 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .box {
+            width: 23%; /* 4 boxes per row with some space */
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h2>EXPLORE OUR COUNTRY</h2>
-    <h1>Welcome to Coastal</h1>
 
-    <p>
-        Where the land kisses the sea, the coastal area lies<br>
-        With waves that whisper secrets under open skies<br>
-        Golden sands and dancing tides in endless play<br>
-        Cradling life and stories in a salty spray<br>
-        A place where earth and ocean blend as one,<br>
-        Breathed by the breeze, warmed by the sun.
-    </p> 
+<h1>EXPLORE OUR COUNTRY</h1>
 
-    <img src="{% static 'coastal.jpg' %}" alt="Coastal image" width="1000" height="1200">
+<div class="container">
+    <div class="box">
+        <h2>Coastal</h2>
+        <p>Where the land kisses the sea, the coastal area lies<br>
+            With waves that whisper secrets under open skies<br>
+            Golden sands and dancing tides in endless play<br>
+            Cradling life and stories in a salty spray<br>
+            A place where earth and ocean blend as one,<br>
+            Breathed by the breeze, warmed by the sun.
+        </p>
+        <img src="{% static 'coastal.jpg' %}" alt="Coastal image">
+    </div>
+    <div class="box">
+        <h2>City View</h2>
+        <p>Where towers rise and dreams ignite,<br>
+            The city pulses with electric light.<br>
+            Streets alive with stories untold,<br>
+            A skyline etched in steel and gold.<br>
+            From bustling days to neon nights,<br>
+            The city lives in endless heights.</p>
+        <img src="{% static 'city.jpg' %}" alt="City image">
+    </div>
+    <div class="box">
+        <h2>Mountains</h2>
+        <p>Where peaks rise tall in skies of blue,<br>
+            And morning mists paint every view.<br>
+            Whispers echo through the pine,<br>
+            In nature's hush, a world divine.<br>
+            A place where silence gently speaks,<br>
+            Among the clouds and ancient peaks.</p>
+        <img src="{% static 'mountain.jpg' %}" alt="Mountain image">
+    </div>
+    <div class="box">
+        <h2>Forest</h2>
+        <p>Beneath the canopy rich and wide,<br>
+            The forest holds the world inside.<br>
+            Leaves that murmur, roots that creep,<br>
+            A sacred hush where secrets sleep.<br>
+            Life awakens in every shade,<br>
+            In natures quiet, green parade.</p>
+        <img src="{% static 'forest.jpg' %}" alt="Forest image">
+    </div>
+</div>
 
 </body>
 </html>
-
