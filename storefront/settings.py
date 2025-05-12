@@ -80,7 +80,8 @@ DATABASES = {
         'NAME': 'storefront',
         'USER':'postgres',
         'PASSWORD':'4463',
-        'HOST':'localhost'
+        'HOST':'localhost',
+        
     }
 }
 
