@@ -14,7 +14,7 @@
     </form>
     <div>
         {% for message in messages %}
-        <h3 style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+        <h3 style="color: {% if message.tags == 'error' %} red{% else %}green{% endif %};">
             {{ message }}
         </h3>
         {% endfor %}
