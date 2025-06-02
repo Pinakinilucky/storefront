@@ -80,8 +80,13 @@ https://templatemo.com/tm-580-woox-travel
                         <li><a href="accounts/home" class="active">Home</a></li>
                         <li><a href="accounts/about">About</a></li>
                         {% if user.is_authenticated %}
-                       <li>Hello, {{user.first_name}}</li>
+                          {% if user.is_superuser %}
+                           <li>Hello, {{user.username }}</li>
+                           <li><a href="accounts/logout">Logout</a></li>
+                          {% else %} 
+                            <li>Hello, {{user.first_name}}</li>
                        <li><a href="accounts/logout">Logout</a></li>
+                          {% endif %}
                         {% else %}
                         <li><a href="accounts/register">Register</a></li>
                         <li><a href="accounts/login">Login</a></li>
