@@ -40,7 +40,8 @@ https://templatemo.com/tm-580-woox-travel
   }
   
   {% for dest in destinations %}
-    #banner{{ forloop.counter }}:checked ~ .slider #top-banner-{{ forloop.counter }}
+  /* Show banner {{ dest.name }} when its radio is checked */
+  #banner{{ forloop.counter }}:checked ~ .slider #top-banner-{{ forloop.counter }}
     {
       opacity: 1;
       z-index: 1;
@@ -75,6 +76,7 @@ https://templatemo.com/tm-580-woox-travel
                         <img src="{% static 'assets/images/logo.png' %}" alt="">
                     </a>
                     <!-- ***** Logo End ***** -->
+
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="accounts/home" class="active">Home</a></li>
@@ -363,4 +365,3 @@ https://templatemo.com/tm-580-woox-travel
   </script>
   </body>
   </html>
-  
