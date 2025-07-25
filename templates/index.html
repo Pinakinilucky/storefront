@@ -139,8 +139,12 @@ https://templatemo.com/tm-580-woox-travel
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
               <h2>{{ dest.desc }}</h2>
-              <h1>{{ dest.name }}</h1>
+              <h1>{{ dest.name }}</h1> 
+              {% if not user.is_authenticated %}
+              <div class="border-button"><a href="accounts/login">Go There</a></div>
+              {% else %}
               <div class="border-button"><a href="accounts/about">Go There</a></div>
+              {% endif %}
             </div>
             <div class="container">
               <div class="row">
