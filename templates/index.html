@@ -218,17 +218,21 @@ https://templatemo.com/tm-580-woox-travel
                       <div class="right-content">
                         <h4>Europe</h4>
                         <span>SWITZERLAND</span>
-                        <div class="main-button">
-                          <a href="{% url 'switzerland' %}">Explore More</a>
-                        </div>
-                        <p>a mountainous place in the middle of Europe.</p>
-                        <ul class="info">
-                          <li><i class="fa fa-user"></i> 8.66 Mil People</li>
-                          <li><i class="fa fa-globe"></i> 41.290 km2</li>
-                          <li><i class="fa fa-home"></i> $3000.00</li>
-                        </ul>
-                        <div class="text-button">
-                          <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
+                      <div class="main-button">
+                        {% if not user.is_authenticated %}
+                        <div class="border-button"><a href="accounts/login">Explore More</a></div>
+                        {% else %}
+                        <a href="{% url 'switzerland' %}">Explore More</a>
+                      </div>
+                      {% endif %}
+              <p>a mountainous place in the middle of Europe.</p>
+              <ul class="info">
+              <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+              <li><i class="fa fa-globe"></i> 41.290 km2</li>
+              <li><i class="fa fa-home"></i> $3000.00</li>
+                      </ul>
+                      <div class="text-button">
+                              <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
                         </div>
                       </div>
                     </div>
